@@ -440,10 +440,28 @@
   }
 
   .pricing-card {
+    position: relative;
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 32px;
     background: white;
+  }
+
+  .plan-audience { font-size: 0.8rem; color: var(--text-muted); margin-top: -10px; margin-bottom: 16px; font-weight: 300; }
+  .pricing-card.featured .plan-audience { color: rgba(255,255,255,0.45); }
+
+  .badge-featured {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: var(--navy);
+    font-size: 0.64rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+    font-family: 'DM Sans', sans-serif;
   }
 
   .pricing-card.featured {
@@ -866,55 +884,51 @@
   <div class="section-inner">
     <div class="section-label">料金プラン</div>
     <h2 class="section-title">シンプルな料金体系</h2>
-    <p class="section-body">基本料金＋従量課金のハイブリッドモデル。すべてのプランで無料トライアルをご利用いただけます。</p>
+    <p class="section-body">シンプルな月額制プラン。すべてのプランで無料トライアルをご利用いただけます。</p>
     <div class="pricing-grid">
-      <div class="pricing-card featured">
+      <div class="pricing-card">
         <div class="plan-name">スターター</div>
+        <div class="plan-audience">小規模チーム向け</div>
         <div class="plan-price">¥9,800</div>
-        <div class="plan-period">/ 月（税別）</div>
-        <div class="plan-sub">+ 従量料金（検索実行数に応じて）</div>
+        <div class="plan-period">/ 月</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>キーワード数：5件まで</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>監視頻度：毎日</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>検出履歴：3ヶ月</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>AI 除外依頼文生成</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>キーワード 10件まで</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>日次モニタリング</li>
           <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>メール通知</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>基本レポート</li>
         </ul>
         <a href="#contact" class="plan-cta">無料で試す</a>
       </div>
-      <div class="pricing-card coming-soon">
-        <div class="plan-name-row">
-          <div class="plan-name">スタンダード</div>
-          <span class="badge-soon">Coming Soon</span>
-        </div>
+      <div class="pricing-card featured">
+        <span class="badge-featured">人気</span>
+        <div class="plan-name">プロ</div>
+        <div class="plan-audience">成長中のブランド向け</div>
         <div class="plan-price">¥29,800</div>
-        <div class="plan-period">/ 月（税別）</div>
-        <div class="plan-sub">+ 従量料金（検索実行数に応じて）</div>
+        <div class="plan-period">/ 月</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>キーワード数：30件まで</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>監視頻度：毎時</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>検出履歴：無制限</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>チケット管理（送受信）</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>逆依頼機能</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>複数ドメイン登録</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>優先サポート</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>キーワード 50件まで</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>時間単位モニタリング</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>メール / Slack 通知</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>詳細レポート</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>AI 削除依頼文の生成</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>WHOIS 参照</li>
         </ul>
-        <span class="plan-cta-disabled">Coming Soon</span>
+        <a href="#contact" class="plan-cta">無料で試す</a>
       </div>
       <div class="pricing-card">
         <div class="plan-name">エンタープライズ</div>
-        <div class="plan-price" style="font-size:1.4rem;padding-top:6px;">要相談</div>
-        <div class="plan-period">カスタム料金・専任サポート付き</div>
-        <div class="plan-sub">&nbsp;</div>
+        <div class="plan-audience">大規模運用向け</div>
+        <div class="plan-price" style="font-size:1.4rem;padding-top:6px;">個別見積り</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>キーワード数：無制限</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>スタンダードの全機能</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>専任カスタマーサクセス</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>キーワード無制限</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>リアルタイム監視</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>専任サポート</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>カスタムレポート</li>
+          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>API 連携</li>
           <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>SLA 保証</li>
-          <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>請求書払い対応</li>
         </ul>
         <a href="#contact" class="plan-cta">お問い合わせ</a>
       </div>
