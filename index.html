@@ -515,6 +515,43 @@
   .pricing-card.featured .plan-cta { background: white; color: var(--navy); }
   .pricing-card.featured .plan-cta:hover { opacity: 0.9; }
 
+  .pricing-card.coming-soon { opacity: 0.65; }
+
+  .plan-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .plan-name-row .plan-name { margin-bottom: 0; }
+
+  .badge-soon {
+    font-size: 0.64rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 9px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .plan-cta-disabled {
+    display: block;
+    text-align: center;
+    padding: 11px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    background: var(--navy-pale);
+    cursor: not-allowed;
+  }
+
   .cta-banner {
     background: var(--navy);
     padding: 80px 48px;
@@ -817,7 +854,7 @@
     <h2 class="section-title">シンプルな料金体系</h2>
     <p class="section-body">基本料金＋従量課金のハイブリッドモデル。すべてのプランで無料トライアルをご利用いただけます。</p>
     <div class="pricing-grid">
-      <div class="pricing-card">
+      <div class="pricing-card featured">
         <div class="plan-name">スターター</div>
         <div class="plan-price">¥9,800</div>
         <div class="plan-period">/ 月（税別）</div>
@@ -832,8 +869,11 @@
         </ul>
         <a href="#contact" class="plan-cta">無料で試す</a>
       </div>
-      <div class="pricing-card featured">
-        <div class="plan-name">スタンダード</div>
+      <div class="pricing-card coming-soon">
+        <div class="plan-name-row">
+          <div class="plan-name">スタンダード</div>
+          <span class="badge-soon">Coming Soon</span>
+        </div>
         <div class="plan-price">¥29,800</div>
         <div class="plan-period">/ 月（税別）</div>
         <div class="plan-sub">+ 従量料金（検索実行数に応じて）</div>
@@ -847,7 +887,7 @@
           <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>複数ドメイン登録</li>
           <li><svg class="check" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 7l3 3 6-6"/></svg>優先サポート</li>
         </ul>
-        <a href="#contact" class="plan-cta">無料で試す</a>
+        <span class="plan-cta-disabled">Coming Soon</span>
       </div>
       <div class="pricing-card">
         <div class="plan-name">エンタープライズ</div>
